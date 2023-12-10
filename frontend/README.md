@@ -1,0 +1,1 @@
+to start application 'npm run dev' from both backend root and frontend root.
