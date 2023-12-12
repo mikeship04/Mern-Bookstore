@@ -22,7 +22,7 @@ router.post('/', async (request, response) => {
       publishYear: request.body.publishYear,
     };
 
-    const book = await Book.create(newBook);
+    const book = await Book.create(newBook);  
 
     return response.status(201).send(book);
   } catch (error) {
@@ -35,7 +35,7 @@ router.post('/', async (request, response) => {
 router.get('/', async (request, response) => {
   try {
     const books = await Book.find({});
-
+    console.log(books)
     return response.status(200).json({
       count: books.length,
       data: books,
